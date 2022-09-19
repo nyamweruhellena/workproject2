@@ -16,7 +16,7 @@
             <a class="nav-link" href="/membership">Membership</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/membership">Post</a>
+            <a class="nav-link" href="{{ route('posts') }}">Post</a> <!-- Using routing power of laravel blade to route to specific pages -->
           </li>
           
         </ul>

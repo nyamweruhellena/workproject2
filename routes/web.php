@@ -28,7 +28,8 @@ Route::get('/about', function() {
     return view('about');
 });
 
-Route::get('/post',[PostController::class,'getPosts']);
+Route::get('/posts', [PostController::class, 'getPosts'])->name('posts');
+Route::get('/posts/{id}', [PostController::class, 'getPost'])->name('post');
     
 
 Route::get('/search', function(Request $request) {

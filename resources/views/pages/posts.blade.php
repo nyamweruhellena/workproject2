@@ -32,7 +32,7 @@
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
                                         <a href="{{ route('post', $post->id) }}" class="btn btn-sm btn-outline-secondary">View</a>
-                                        <form action="{{ route('deletePost',$post->muser->id) }}" method="POST">
+                                        <form action="{{ route('deletePost',$post->id) }}" method="POST">
                                           @csrf
                                           @method('DELETE')
                                           <button type="submit" class="btn btn-sm btn-outline-secondary">Delete</button>

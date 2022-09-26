@@ -38,7 +38,7 @@ Route::delete('/post/{id}', [PostController::class, 'deletePost'])->name('delete
 Route::get('/search', function(Request $request) {
     return response()->json([
         'employees' => $request->q
-     ]);
+    ]);
 });
 
 Route::post('/add_member',[UserController::class, 'create'])->name('add');

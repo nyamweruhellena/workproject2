@@ -19,4 +19,9 @@ class Post extends Model
     public function muser(){
         return $this->belongsTo(User::class, 'user','id');
     }
+
+    // nimeongeza relationship hii ili iwe rahisi kuangalia comments zilizotolewa kwa post
+    public function comments(){
+        return $this->hasMany(Comment::class, 'post_id', 'id');
+    }
 }

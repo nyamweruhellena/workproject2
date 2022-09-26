@@ -11,11 +11,12 @@ class Post extends Model
 
     protected $fillable = [
         'content',
-        'user'
+        'user',
+        'path'
     ];
 
     // defining relationships for the post model by Eloquent ORM
-    public function user(){
-        return $this->belongsTo(User::class, 'user');
+    public function muser(){
+        return $this->belongsTo(User::class, 'user','id');
     }
 }

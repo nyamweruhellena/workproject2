@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -30,7 +31,9 @@ Route::get('/about', function() {
 
 Route::get('/posts', [PostController::class, 'getPosts'])->name('posts');
 Route::get('/posts/{id}', [PostController::class, 'getPost'])->name('post');
-    
+Route::post('/post',[PostController::class, 'create'])->name('create');
+Route::delete('/post/{id}', [PostController::class, 'deletePost'])->name('deletePost');
+
 
 Route::get('/search', function(Request $request) {
     return response()->json([
@@ -40,5 +43,6 @@ Route::get('/search', function(Request $request) {
 
 Route::post('/add_member',[UserController::class, 'create'])->name('add');
 Route::get('/user/{id}',[UserController::class, 'find'])->name('find');
+
 
 

@@ -17,7 +17,9 @@ class PostFactory extends Factory
         return [
             'content' => $this->faker->sentence(),
             'deleted_at' => $this->faker->date('Y-m-d H:m:s'),
+            'path' => $this->faker->imageUrl(),
             'user' => 1,
+
         ];
     }
 }

@@ -19,6 +19,10 @@ class CreatePostsTable extends Migration
             $table->unsignedBigInteger('user');
             $table->timestamp('deleted_at');
             $table->timestamps();
+            $table->string('path');
+            
+
+
 
             $table->foreign('user')
                 ->references('id')
